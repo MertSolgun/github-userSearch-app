@@ -15,12 +15,11 @@ const twitterUsername = document.querySelector(".twitter");
 const website = document.querySelector(".website");
 const company = document.querySelector(".job");
 
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", async function () {
   const url = `https://api.github.com/users/${input.value}`;
   async function getUrl() {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
 
     if (response.status === 404) {
       Swal.fire({
@@ -66,7 +65,6 @@ searchBtn.addEventListener("click", function () {
     }
   }
   input.value = "";
-
   getUrl();
 });
 
