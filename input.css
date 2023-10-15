@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 80vh;
+  padding: 75px 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Space Mono", monospace;
+}
+
+body.light .devfinder {
+  color: black;
+  font-weight: bold;
+}
+
+body.light .bio p {
+  color: #697c9a;
+}
+body.light .repos {
+  background-color: #f6f8ff;
+}
+body.light .repos h3 {
+  color: #4b6a9b;
+}
+body.light .repos span {
+  color: black;
+  font-weight: bold;
+}
+
+body.light .user-link span {
+  color: #4b6a9b;
+}
+body.light .user-link svg path {
+  fill: #4b6a9b;
+}
+
+body.light .modeStatus {
+  color: black;
+}
+body.light #login {
+  color: black;
+}
+body.light .modeIcon path {
+  fill: #222731;
+}
+body.light .bio {
+  color: #4b6a9b;
+}
+body.light #joined {
+  color: #697c9a;
+}
+
+body.dark #searchInput {
+  color: white;
+}
+body.light #searchInput {
+  background-color: white;
+}
+
+body.light .user-section {
+  background-color: #fff;
+  box-shadow: 5px 15px 15px gray;
+}
+
+.dark {
+  background-color: #141d2f;
+}
+
+.light {
+  background-color: #f6f8ff;
+}
+.container {
+  max-width: 730px;
+  width: 100%;
+  margin: 0 auto;
+}
+.inputContainer input {
+  border: none;
+  outline: none;
+  background-color: #1e2a47;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 41rem;
+  padding: 1.5rem 3rem 2rem;
+  border-radius: 10px;
+}
+.searchContainer {
+  margin: 36px 0px 24px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-svg {
+  position: relative;
+  left: 2rem;
+}
+.search-btn {
+  background-color: #0079ff;
+  position: relative;
+  right: 6.5rem;
+  border-radius: 10px;
+  color: white;
+  padding: 13px 24px;
+}
+
+.user-section {
+  background-color: #1e2a47;
+  padding: 32px 24px;
+  border-radius: 10px;
+  display: flex;
+  max-width: 41rem;
+  justify-content: center;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  column-gap: 10rem;
+  row-gap: 2px;
+  justify-content: center;
+}
+.bio {
+  margin: 20px 0 32px 0;
+}
+
+.desktop-img {
+  margin-right: 36px;
+  border-radius: 50%;
+  height: 117px;
+  width: 117px;
+}
+.user-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.userimg-content {
+  display: flex;
+}
+
+.user-link {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding: 10px;
+}
+.user-link-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.user-top {
+  line-height: 1.8rem;
+}
+.user-main {
+  display: flex;
+}
+
+.repos {
+  padding: 10px 10px 10px 10px;
+  gap: 20px;
+}
+/* ============================= */
+/* Media query */
+@media (max-width: 700px) {
+  .desktop-img {
+    display: none !important;
+  }
+  .mobile-img {
+    display: flex !important;
+  }
+  .user-top {
+    justify-content: flex-start;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 0;
+    gap: 10px;
+  }
+  #searchInput {
+    font-size: 12px;
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .mobile-img {
+    border-radius: 50%;
+    display: block;
+    grid-column: 1/2;
+    grid-row: span 3;
+    width: 100px;
+  }
+
+  .user-info {
+    display: grid;
+    grid-template-rows: repeat(1, auto);
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+  }
+  .inputContainer input {
+    width: 100%;
+    min-width: 100%;
+    padding: 1rem 3rem 1rem;
+    display: flex;
+    margin: auto;
+    min-width: 350px;
+    justify-content: center;
+    align-items: center;
+  }
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  .search-btn {
+    background-color: #0079ff;
+    position: relative;
+    right: 6.5rem;
+    border-radius: 10px;
+    color: white;
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  .mainHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+  body {
+    padding: 32px 24px 80px 24px;
+    min-height: 0;
+    max-width: 100%;
+  }
+
+  .user-link {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+  }
+  .user-link-container {
+    display: flex;
+    align-items: center;
+    padding: 0px !important;
+  }
+}
