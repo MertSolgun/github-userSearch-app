@@ -65,10 +65,14 @@ searchBtn.addEventListener("click", async function () {
     }
   }
   input.value = "";
+
   getUrl();
 });
 
 //?Light-dark mode
+
+const modeIcon = document.querySelector(".modeIcon");
+const darkIcon = document.querySelector(".darkicon");
 
 const savedTheme = localStorage.getItem("theme");
 let currentTheme;

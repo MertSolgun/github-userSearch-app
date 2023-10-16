@@ -643,6 +643,14 @@ body.light .devfinder {
   font-weight: bold;
 }
 
+body.light .darkicon {
+  display: flex !important;
+}
+
+body.light .modeIcon {
+  display: none;
+}
+
 body.light .bio p {
   color: #697c9a;
 }
